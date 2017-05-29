@@ -1,5 +1,13 @@
 BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
 
+
+all:
+	@echo ""
+	@echo "Comandos disponibles:"
+	@echo ""
+	@echo "   deploy     realiza un deploy sobre dokku"
+	@echo ""
+
 deploy:
 	@echo "▷ Estás en el branch ${BRANCH} a punto de realizar un deploy ..."
 	@sh confirm.sh && make realizar_deploy
