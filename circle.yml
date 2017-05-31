@@ -1,0 +1,11 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - git remote add production dokku@enjambrelab.com.ar:node-js-sample  
+      - git push production master:master
+  staging:
+    branch: staging
+    commands:
+      - git remote add staging dokku@enjambrelab.com.ar:staging-node-js-sample  
+      - git push staging master:master
