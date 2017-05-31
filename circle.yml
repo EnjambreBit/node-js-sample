@@ -2,6 +2,7 @@ deployment:
   production:
     branch: master
     commands:
+      - git remote add production dokku@enjambrelab.com.ar:node-js-sample 
       - make realizar_deploy
   staging:
     branch: staging

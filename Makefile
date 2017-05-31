@@ -33,7 +33,7 @@ _deploy_a_staging:
 	git push staging ${BRANCH}:master
 
 _deploy_a_master:
-	git push production ${BRANCH}:master
+	git push production ${BRANCH}:master -v
 
 
 test:
