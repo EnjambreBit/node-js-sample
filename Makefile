@@ -14,10 +14,10 @@ all:
 deploy:
 	@echo "${V}▷ Estás en el branch ${BRANCH} a punto de realizar un deploy ...${N}"
 	@sh confirm.sh && make realizar_deploy
+	git push
 
 realizar_deploy:
 	@echo "${V}▷ Estás en el branch ${BRANCH}${N}"
-	git push
 ifeq (${BRANCH},master)
 	make _deploy_a_master
 else
