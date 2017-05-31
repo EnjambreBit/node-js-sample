@@ -8,6 +8,7 @@ all:
 	@echo "Comandos disponibles:"
 	@echo ""
 	@echo "   ${V}deploy${N}     realiza un deploy sobre dokku"
+	@echo "   ${V}test${N}       ejecuta los tests"
 	@echo ""
 
 deploy:
@@ -27,3 +28,7 @@ else
 	@echo "${V}▷ Se cancela el deploy, no estás en el branch master ni staging.${N}"
 endif
 endif
+
+
+test:
+	ls
