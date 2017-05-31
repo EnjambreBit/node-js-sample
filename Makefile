@@ -18,16 +18,24 @@ deploy:
 realizar_deploy:
 	@echo "${V}▷ Estás en el branch ${BRANCH}${N}"
 ifeq (${BRANCH},master)
-	git push
-	git push production ${BRANCH}:master
+	make _deploy_a_master
 else
 ifeq (${BRANCH},staging)
-	git push
-	git push staging ${BRANCH}:master
+	make _deploy_a_staging
 else
 	@echo "${V}▷ Se cancela el deploy, no estás en el branch master ni staging.${N}"
 endif
 endif
+
+
+_deploy_a_staging:
+	git push
+	git push staging ${BRANCH}:master
+
+
+_deploy_a_master:
+	git push
+	git push production ${BRANCH}:master
 
 
 test:

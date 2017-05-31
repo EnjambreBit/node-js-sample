@@ -2,8 +2,8 @@ deployment:
   production:
     branch: master
     commands:
-      - make deploy
+      - make realizar_deploy
   staging:
     branch: staging
     commands:
-      - make deploy
+      - make realizar_deploy
